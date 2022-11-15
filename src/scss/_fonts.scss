@@ -1,0 +1,77 @@
+@font-face {
+    font-family: "PF Centro Sans Pro";
+    font-weight: 400;
+    font-style:"normal";
+    src:local("PF Centro Sans Pro Regular"),
+        local("PFCentroSansPro-Regular"),
+        url("../fonts/PFCentroSansPro-Regular.woff2") format('woff2'),
+        url("../fonts/PFCentroSansPro-Regular.woff") format('woff'),
+        url("../fonts/PFCentroSansPro-Regular.eot") format('eot');
+    font-display: swap;
+}
+@font-face {
+    font-family: "PF Centro Sans Pro";
+    font-weight: 700;
+    font-style:"normal";
+    src:local("PF Centro Sans Pro Bold"),
+        local("PFCentroSansPro-Bold"),
+        url("../fonts/PFCentroSansPro-Bold.woff2") format('woff2'),
+        url("../fonts/PFCentroSansPro-Bold.woff") format('woff'),
+        url("../fonts/PFCentroSansPro-Bold.eot") format('eot');
+    font-display: swap;
+  }
+@font-face {
+    font-family: "Formular";
+    font-weight: 400;
+    font-style:"normal";
+    src:local("Formular"),
+        local("Formular"),
+        url("../fonts/Formular.woff2") format('woff2'),
+        url("../fonts/Formular.woff") format('woff'),
+        url("../fonts/Formular.eot") format('eot');
+    font-display: swap;
+}
+@font-face {
+    font-family: "Formular";
+    font-weight: 700;
+    font-style:"normal";
+    src:local("Formular Bold"),
+        local("Formular-Bold"),
+        url("../fonts/Formular-Bold.woff2") format('woff2'),
+        url("../fonts/Formular-Bold.woff") format('woff'),
+        url("../fonts/Formular-Bold.eot") format('eot');
+    font-display: swap;
+}
+@font-face {
+    font-family: "Gosha Sans";
+    font-weight: 700;
+    font-style:"normal";
+    src:local("Gosha Sans Bold"),
+        local("FGoshaSans-Bold"),
+        url("../fonts/Formular-Bold.woff2") format('woff2'),
+        url("../fonts/Formular-Bold.woff") format('woff'),
+        url("../fonts/Formular-Bold.eot") format('eot');
+    font-display: swap;
+}
+@font-face {
+    font-family: "Gosha Sans";
+    font-weight: 400;
+    font-style:"normal";
+    src:local("Gosha Sans Regular"),
+        local("FGoshaSans-Regular"),
+        url("../fonts/GoshaSans-Regular.woff2") format('woff2'),
+        url("../fonts/GoshaSans-Regular.woff") format('woff'),
+        url("../fonts/GoshaSans-Regular.eot") format('eot');
+    font-display: swap;
+}
+@font-face {
+    font-family: "Athelas";
+    font-weight: 700;
+    font-style:"normal";
+    src:local("Athelas Bold"),
+        local("Athelas-Bold"),
+        url("../fonts/Athelas-Bold.woff2") format('woff2'),
+        url("../fonts/Athelas-Bold.woff") format('woff'),
+        url("../fonts/Athelas-Bold.eot") format('eot');
+    font-display: swap;
+}

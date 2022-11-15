@@ -1,0 +1,1030 @@
+@import "fonts";
+@import "reset";
+@import "mixins";
+
+//----------------------------------------------------------HEADING START-----------------------------------------------------
+.header {
+  padding-top: 13px;
+  padding-bottom: 16px;
+  z-index: 10;
+
+  @include respond-below(mlg) {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  @include respond-below(lg) {
+    background: rgba(255, 255, 255, 0.39);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .container {
+    max-width: 1400px;
+    padding: 0 50px;
+    margin: 0 auto;
+
+    @include respond-below(mlg) {
+      padding: 0 15px;
+    }
+
+  }
+
+  &-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-logo {
+    width: 10%;
+    min-width: 90px;
+  }
+
+  .menu-body {
+    .menu {
+      display: flex;
+      gap: 38px;
+
+      @include respond-below(mlg) {
+        gap: 15px;
+      }
+
+      @include respond-below(lg) {
+        flex-direction: column;
+        position: fixed;
+        gap: 28px;
+        padding-top: 91px;
+        padding-left: 27px;
+        padding-bottom: 31px;
+        top: 0;
+        transition: .3s;
+        right: -300px;
+      }
+
+      li {
+        .menu_link {
+          color: #000;
+          text-decoration: none;
+          font-family: 'PF Centro Sans Pro';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 15px;
+          line-height: 19px;
+          transition: color 0.3s linear;
+
+          @include respond-below(mlg) {
+            font-size: 14px;
+          }
+
+          @include respond-below(lg) {
+            font-size: 15px;
+            line-height: 16px;
+          }
+
+          &:hover {
+            color: rgb(167, 25, 25);
+          }
+        }
+
+        .button {
+          background-color: #00963E;
+          padding: 16px;
+          border-radius: 24px 0px;
+          color: #fff;
+          text-decoration: none;
+          font-family: 'PF Centro Sans Pro';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 15px;
+          line-height: 19px;
+          transition: background-color 0.3s linear;
+
+          @include respond-below(mlg) {
+            font-size: 14px;
+            padding: 12px;
+          }
+
+          @include respond-below(lg) {
+            padding: 13px;
+            font-size: 12.5px;
+            line-height: 16px;
+            border-radius: 16.6667px 0px;
+          }
+
+          &:hover {
+            background-color: rgb(57, 112, 68);
+          }
+        }
+      }
+    }
+
+    .menu.active {
+      @include respond-below(lg) {
+        right: 0;
+        background: rgba(255, 255, 255, 0.39);
+        backdrop-filter: blur(2px);
+        width: 214px;
+      }
+    }
+  }
+
+  .btn-menu {
+    @include respond-below(lg) {
+      background: #00963E;
+      border-radius: 50%;
+      width: 41px;
+      height: 41px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+    }
+
+    & .line {
+      @include respond-below(lg) {
+        width: 24px;
+        position: relative;
+      }
+
+      &::before {
+        top: 8px;
+      }
+
+      &::after {
+        top: -8px;
+      }
+    }
+
+    & .line::after,
+    & .line::before {
+      content: '';
+      width: 24px;
+      position: absolute;
+      left: 0;
+    }
+
+    & .line,
+    & .line::after,
+    & .line::before {
+      display: inline-block;
+      background-color: #fff;
+      height: 3px;
+      transition: .3s;
+    }
+
+    &.active .line {
+      background-color: transparent;
+    }
+
+    &.active .line::after,
+    &.active .line::before {
+      top: 0;
+    }
+
+    &.active .line::after {
+      transform: rotate(-45deg);
+    }
+
+    &.active .line::before {
+      transform: rotate(45deg);
+    }
+
+  }
+}
+
+
+//-------------------------------------------------------HEADING END-------------------------------------------------
+
+
+//-------------------------------------------------------HOME START--------------------------------------------------------
+.home {
+  min-height: 878.63px;
+  margin-top: -24px;
+  position: relative;
+  padding-top: 290px;
+
+  @include respond-below(sm) {
+    min-height: 850px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &-bg-img {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    @include respond-below(sm) {
+      .home-bg-img1 {
+        display: none;
+      }
+
+      background: url("../img/home-bg-imf-mobile.jpg") no-repeat;
+      background-position: 85% 0;
+    }
+
+    & img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+
+      @include respond-below(lg) {
+        object-position: 70%;
+      }
+    }
+  }
+
+  &-content {
+    max-width: 721px;
+    min-height: 605px;
+    position: absolute;
+    margin-left: -32px;
+    background: rgba(255, 255, 255, 0.39);
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+    padding-top: 40px;
+    padding-left: 86px;
+    padding-right: 53px;
+
+    @include respond-below(lg) {
+      max-width: 518px;
+      min-height: 605px;
+    }
+
+    @include respond-below(sm) {
+      max-width: 345px;
+      background: none;
+      padding: 0 0;
+      margin: 0 0;
+      bottom: 0;
+      min-height: 310px;
+    }
+
+    @include respond-below(smxs) {
+      max-width: 290px;
+    }
+
+    span {
+      color: #00963E;
+    }
+
+  }
+
+  &-heading {
+    font-family: 'Formular';
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 55px;
+    color: #000000;
+    min-height: 159px;
+
+    @include respond-below(lg) {
+      font-size: 40px;
+      line-height: 45px;
+      min-height: 130px;
+    }
+
+    @include respond-below(sm) {
+      font-size: 36px;
+      line-height: 32px;
+      min-height: 100px;
+    }
+
+    @include respond-below(smxs) {
+      font-size: 31px;
+      line-height: 29px;
+      min-height: 90px;
+    }
+  }
+
+  &-icon {
+    margin-bottom: 10px;
+    margin-top: -17px;
+
+    @include respond-below(lg) {
+      .home-icon1 {
+        width: 350px;
+      }
+    }
+
+    @include respond-below(sm) {
+      background: url("../img/icooooon.png") no-repeat;
+      height: 24px;
+
+      .home-icon1 {
+        display: none;
+      }
+    }
+  }
+
+  &-text {
+    font-family: 'Formular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 26px;
+
+    @include respond-below(lg) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    @include respond-below(sm) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @include respond-below(smxs) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+}
+
+//------------------------------------------------------HOME END--------------------------------------------------------
+
+//-----------------------------------------------------ADV START--------------------------------------------------------
+.adv {
+  padding-top: 63.37px;
+  padding-left: 215px;
+  padding-right: 215px;
+
+  @include respond-below(mlg) {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+
+  @include respond-below(lg) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  &-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include respond-below(lg) {
+      justify-content: center;
+      gap: 43px;
+    }
+  }
+
+
+
+  &-content-item {
+    width: 284px;
+    height: 300px;
+    position: relative;
+    text-align: center;
+  }
+
+  &-krugi {
+    width: 152px;
+    height: 158px;
+    position: relative;
+    margin: auto;
+
+    &-1 {
+      width: 124px;
+      height: 124px;
+      position: absolute;
+      background: #01943E;
+      border-radius: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 19px;
+      margin-left: 14px;
+    }
+
+    &-2 {
+      width: 124px;
+      height: 124px;
+      background: #E6F3E5;
+      border-radius: 100px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+    }
+
+    &-3 {
+      width: 124px;
+      height: 124px;
+      background: #E6F3E5;
+      border-radius: 100px;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+  }
+
+  &-krugi-text {
+    font-family: 'Formular';
+    font-weight: 700;
+    font-size: 42px;
+    text-align: center;
+    line-height: 30px;
+    color: transparent;
+    -webkit-text-stroke: 2px #fff;
+  }
+
+  &-post-text {
+    font-family: 'Formular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 26px;
+    text-align: center;
+    color: #000000;
+    margin-top: 24px;
+  }
+}
+
+//-------------------------------------------------------ADV END--------------------------------------------------------
+
+
+
+//------------------------------------------------------INFO START------------------------------------------------------
+.info {
+  min-height: 575px;
+  position: relative;
+  padding-left: 215px;
+  padding-right: 215px;
+  padding-top: 159px;
+
+  @include respond-below(mlg) {
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-bottom: 80px;
+  }
+
+  @include respond-below(lg) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  @include respond-below(sm) {
+    min-height: 472px;
+    padding-top: 78px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  &-bg-img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    & img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-items {
+    text-align: center;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+
+    @include respond-below(lg) {
+      justify-content: center;
+      gap: 50px;
+    }
+
+    @include respond-below(sm) {
+      display: none;
+    }
+  }
+
+  &-item {
+    background-color: #fff;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 20px 0px;
+    max-width: 283px;
+    height: 313px;
+    position: relative;
+
+    &-img {
+      margin-top: 34px;
+      margin-bottom: 20px;
+      ;
+      max-height: 65px;
+    }
+
+    &-tittle {
+      font-family: 'Gosha Sans';
+      font-style: normal;
+      font-weight: 700;
+      line-height: 28px;
+      min-height: 41px;
+    }
+
+    &-icon {
+      margin-top: -14px;
+      margin-bottom: 10px;
+    }
+
+    &-desc {
+      font-family: 'Formular';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      max-width: 225px;
+      min-height: 169px;
+      margin: auto;
+    }
+  }
+
+  &-btn {
+    font-family: 'PF Centro Sans Pro';
+    padding: 16px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 19px;
+    text-transform: uppercase;
+    background: #00963E;
+    border-radius: 20px 0px;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: background-color 0.3s linear;
+
+    &:hover {
+      background-color: rgb(57, 112, 68);
+    }
+  }
+
+  &-button {
+    margin-top: -51px
+  }
+}
+
+.slider-mobile {
+  display: none;
+  max-width: 313px;
+  margin: 0 auto;
+  text-align: center;
+
+  @include respond-below(sm) {
+    display: block;
+  }
+
+  &-item {
+    background-color: #fff;
+    border-radius: 20px 0px;
+    margin-right: 15px;
+    margin-left: 15px;
+    max-width: 283px;
+    height: 313px;
+  }
+
+  .slick-prev {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: 5;
+    font-size: 0;
+    height: 42px;
+    width: 42px;
+    background: url(../img/slider-btn-prev.png) 0 0 /100% no-repeat;
+  }
+
+  .slick-next {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    z-index: 5;
+    font-size: 0;
+    height: 42px;
+    width: 42px;
+    background: url(../img/slider-btn-next.png) 0 0 / 100% no-repeat;
+  }
+
+  .slick-list {
+    min-height: 330px;
+  }
+
+  .slick-slide img {
+    display: inline;
+  }
+}
+
+//------------------------------------------------------INFO END--------------------------------------------------------
+
+
+
+//------------------------------------------------------NEWS START------------------------------------------------------
+.news {
+  padding-top: 114px;
+  padding-bottom: 92px;
+  padding-left: 150px;
+  padding-right: 150px;
+  position: relative;
+
+  @include respond-below(mlg) {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  @include respond-below(lg) {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 57px;
+    padding-bottom: 81px;
+  }
+
+  &-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+
+  &-head {
+    display: block;
+
+    @include respond-below(sm) {
+      display: none;
+    }
+  }
+
+  &-head-tittle {
+    font-family: 'Gosha Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 60px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 25px;
+
+    @include respond-below(mlg) {
+      font-size: 45px;
+      line-height: 53px;
+    }
+
+    @include respond-below(lg) {
+      font-size: 43px;
+      line-height: 50px;
+    }
+  }
+
+  &-head-mobile {
+    display: none;
+
+    @include respond-below(sm) {
+      display: block;
+    }
+  }
+
+  &-head-tittle-mobile {
+    font-family: 'Gosha Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 43px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 2px;
+  }
+
+  &-icon {
+    max-width: 487px;
+
+    @include respond-below(lg) {
+      max-width: 345px;
+    }
+  }
+
+  &-steps {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    @include respond-below(lg) {
+      justify-content: center;
+      gap: 30px;
+    }
+
+    @include respond-below(sm) {
+      display: none;
+    }
+  }
+
+  &-step {
+    max-width: 307px;
+    position: relative;
+
+    &:nth-child(2) {
+      margin-top: 50px;
+
+      @include respond-below(lg) {
+        margin-top: 0px;
+      }
+    }
+
+    &-heading {
+      font-family: 'Gosha Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 30px;
+      color: #00963E;
+      margin-bottom: 12px;
+
+      @include respond-below(smxs) {
+        font-size: 29px;
+      }
+
+      &::before {
+        font-family: 'Athelas';
+        content: attr(data-number);
+        display: inline-block;
+        font-size: 100px;
+        line-height: 33px;
+        margin-right: -123px;
+        width: 137px;
+        color: rgba(0, 150, 62, 0.13);
+      }
+    }
+
+    &-text {
+      font-family: 'Formular';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      color: #000000;
+      margin-left: 13px;
+    }
+
+    &-btn {
+      display: inline-block;
+      padding-right: 130px;
+      font-family: 'PF Centro Sans Pro';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 21px;
+      line-height: 25px;
+      color: #00963E;
+      text-decoration: none;
+      background: url("../img/strelka.jpg") no-repeat 95% center;
+      margin-top: 20px;
+      margin-bottom: 13px;
+      margin-left: 13px;
+      transition: 0.3s all;
+
+      @include respond-below(smxs) {
+        font-size: 20px;
+      }
+
+      &:hover {
+        background: url("../img/strelka.jpg") no-repeat right center;
+      }
+    }
+
+    &-img {
+      max-width: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+  }
+}
+
+.news-slider {
+  max-width: 337px;
+  margin: 0 auto;
+  display: none;
+
+  @include respond-below(sm) {
+    display: block;
+  }
+
+  &-step {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+
+  .slick-prev {
+    position: absolute;
+    left: 0;
+    bottom: 153px;
+    z-index: 5;
+    font-size: 0;
+    height: 42px;
+    width: 42px;
+    background: url(../img/slider-btn-prev.png) 0 0 /100% no-repeat;
+  }
+
+  .slick-next {
+    position: absolute;
+    right: 0;
+    bottom: 153px;
+    z-index: 5;
+    font-size: 0;
+    height: 42px;
+    width: 42px;
+    background: url(../img/slider-btn-next.png) 0 0 / 100% no-repeat;
+  }
+}
+
+//------------------------------------------------------NEWS END------------------------------------------------------
+
+//-----------------------------------------------------FOOTER START------------------------------------------------------
+.footer {
+  min-height: 404px;
+  position: relative;
+  padding-top: 97px;
+
+  @include respond-below(lg) {
+    padding-top: 66px;
+    min-height: 455px;
+  }
+
+  &-bg-img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(128, 102, 72);
+    z-index: -1;
+
+    & img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-content {
+    margin: auto;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(2px);
+    border-radius: 5px;
+    max-width: 1072px;
+    min-height: 228px;
+    position: absolute;
+    right: 0;
+    left: 0;
+
+    @include respond-below(mlg) {
+      max-width: 900px;
+    }
+
+    @include respond-below(lg) {
+      max-width: 600px;
+      padding-bottom: 14px;
+      padding-left: 15px;
+      padding-right: 16px;
+      text-align: center;
+    }
+
+    @include respond-below(sm) {
+      max-width: 362px;
+    }
+
+    @include respond-below(smxs) {
+      max-width: 300px;
+    }
+  }
+
+  &-heading {
+    margin-top: 30px;
+
+    @include respond-below(mlg) {
+      margin-top: 17px;
+    }
+
+    &-text {
+      font-family: 'Formular';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 34px;
+      color: #000000;
+      text-align: center;
+      margin-bottom: 30px;
+
+      @include respond-below(mlg) {
+        font-size: 26px;
+        line-height: 33px;
+      }
+
+      @include respond-below(lg) {
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 17px;
+      }
+
+      @include respond-below(sm) {
+        font-size: 22px;
+        line-height: 27px;
+      }
+
+      @include respond-below(smxs) {
+        font-size: 20px;
+        line-height: 25px;
+      }
+    }
+  }
+
+  &-input {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 60px;
+    max-width: 845px;
+    min-height: 70px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding-left: 42px;
+
+    @include respond-below(lg) {
+      padding-top: 30px;
+      display: inline-block;
+      min-height: 214px;
+      padding-left: 0px;
+      border-radius: 20px;
+    }
+
+    .email {
+      @include respond-below(lg) {
+        margin-top: 38px;
+        margin-bottom: 48px;
+      }
+
+      @include respond-below(smxs) {
+        margin-top: 30px;
+        margin-bottom: 40px;
+      }
+    }
+
+    @include respond-below(smxs) {
+      padding-top: 20px;
+      min-height: 200px;
+    }
+
+    &-item {
+      font-family: 'PF Centro Sans Pro';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 22px;
+      color: #BFBFBF;
+      border-bottom: 1px solid #BFBFBF;
+      margin-right: 45px;
+      padding-left: 10px;
+      width: 267px;
+
+      @include respond-below(lg) {
+        margin-right: 0;
+        width: 500px;
+      }
+
+      @include respond-below(sm) {
+        width: 267px;
+      }
+
+      @include respond-below(smxs) {
+        width: 250px;
+      }
+    }
+
+    &-btn {
+      font-family: 'PF Centro Sans Pro';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 19px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      background: #00963E;
+      border-radius: 20px 0px;
+      text-decoration: none;
+      padding: 16px;
+      transition: background-color 0.3s linear;
+
+      &:hover {
+        background-color: rgb(57, 112, 68);
+      }
+    }
+  }
+}
+
+/*-----------------------------------------------------FOOTER END------------------------------------------------------*/

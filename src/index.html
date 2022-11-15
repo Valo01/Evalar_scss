@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evalar</title>
+    <link rel="stylesheet" href="../dist/slick.css">
+    <link rel="stylesheet" href="../dist/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-line">
+                <a href="@">
+                    <img src="../src/img/logo.png" class="header-logo">
+                </a>
+                <nav class="menu-body">
+                    <ul class="menu" id="list-menu">
+                        <li><a href="@" class="menu_link">ЧИТАЙ УПАКОВКУ</a></li>
+                        <li><a href="@" class="menu_link">ОБРАЗОВАТЕЛЬНАЯ СРЕДА</a></li>
+                        <li><a href="@" class="menu_link">ЭКОЛОГИЧЕСКИЕ ИНИЦИАТИВЫ</a></li>
+                        <li><a href="@" class="menu_link">ИНТЕРАКТИВНЫЙ ТЕСТ</a></li>
+                        <li>
+                            <div class="btn">
+                                <a class="button" href="@" id="button1">ПОДПИСАТЬСЯ НА НОВОСТИ</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="btn-menu" id="btn-menu" onclick="toggleMenu()">
+                    <div class="line"></div>
+                </button>
+            </div>
+        </div>
+    </header>
+    <section class="home">
+        <div class="home-bg-img">
+            <img src="../src/img/home-bg-img.jpg" class="home-bg-img1" loading="lazy">
+        </div>
+        <div class="home-content">
+            <h1 class="home-heading">Забота о природе <span>вместе с Эвалар</span></h1>
+            <div class="home-icon">
+                <img class="home-icon1" src="../src/img/home-icon.png">
+            </div>
+            <div class="home-text">
+                <p>Природа Алтая уникальна. Большую часть территории занимают горы, сплошь изрезанные речными долинами и
+                    межгорными котлованами. На Алтае насчитывается свыше 200 тысяч рек и озер, и в большинстве своем это
+                    горные реки – с чистейшей водой, сильным течением, крутыми порогами и сильными перепадами.</p>
+            </div>
+        </div>
+    </section>
+    <section class="adv">
+        <ul class="adv-content">
+            <li class="adv-content-item">
+                <div class="adv-krugi">
+                    <div class="adv-krugi-1">
+                        <div class="adv-krugi-text">
+                            <p>450 кг</p>
+                        </div>
+                    </div>
+                    <div class="adv-krugi-2"></div>
+                    <div class="adv-krugi-3"></div>
+                </div>
+                <div class="adv-post-text">
+                    <p>отходов производит <br> 1 человек за 1 год жизни</p>
+                </div>
+            </li>
+            <li class="adv-content-item">
+                <div class="adv-krugi">
+                    <div class="adv-krugi-1">
+                        <div class="adv-krugi-text">
+                            <p>4 млн</p>
+                        </div>
+                    </div>
+                    <div class="adv-krugi-2"></div>
+                    <div class="adv-krugi-3"></div>
+                </div>
+                <div class="adv-post-text">
+                    <p>общая площать мусорных
+                        полигонов и свалок
+                        в России в гектарах</p>
+                </div>
+            </li>
+            <li class="adv-content-item">
+                <div class="adv-krugi">
+                    <div class="adv-krugi-1">
+                        <div class="adv-krugi-text">
+                            <p>90%</p>
+                        </div>
+                    </div>
+                    <div class="adv-krugi-2"></div>
+                    <div class="adv-krugi-3"></div>
+                </div>
+                <div class="adv-post-text">
+                    <p>отходов отправляются
+                        на свалки и разлагаются
+                        сотни лет</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="info">
+        <div class="info-bg-img">
+            <img src="../src/img/info-bg-img.jpg" loading="lazy">
+        </div>
+        <div class="info-content">
+            <div class="info-items">
+                <div class="info-item">
+                    <div class="info-item-img">
+                        <img src="../src/img/info1-img.png" loading="lazy">
+                    </div>
+                    <div class="info-item-tittle">
+                        <p>Читай упаковку</p>
+                    </div>
+                    <div class="info-item-icon">
+                        <img src="../src/img/info-icon.png" loading="lazy">
+                    </div>
+                    <div class="info-item-desc">
+                        <p>Природа Алтая уникальна. Большую часть территории занимают горы, сплошь изрезанные речными
+                            долинами и межгорными котлованами. </p>
+                    </div>
+                    <div class="info-button">
+                        <a class="info-btn" href="@">Подробнее</a>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-item-img">
+                        <img src="../src/img/info2-img.png" loading="lazy">
+                    </div>
+                    <div class="info-item-tittle">
+                        <p>Читай упаковку</p>
+                    </div>
+                    <div class="info-item-icon">
+                        <img src="../src/img/info-icon.png" loading="lazy">
+                    </div>
+                    <div class="info-item-desc">
+                        <p>Природа Алтая уникальна. Большую часть территории занимают горы, сплошь изрезанные речными
+                            долинами и межгорными котлованами. </p>
+                    </div>
+                    <div class="info-button">
+                        <a class="info-btn" href="@">Подробнее</a>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-item-img">
+                        <img src="../src/img/info3-img.png" loading="lazy">
+                    </div>
+                    <div class="info-item-tittle">
+                        <p>Читай упаковку</p>
+                    </div>
+                    <div class="info-item-icon">
+                        <img src="../src/img/info-icon.png">
+                    </div>
+                    <div class="info-item-desc">
+                        <p>Природа Алтая уникальна. Большую часть территории занимают горы, сплошь изрезанные речными
+                            долинами и межгорными котлованами. </p>
+                    </div>
+                    <div class="info-button">
+                        <a class="info-btn" href="@">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-mobile">
+                <div class="slider-mobile-item">
+                    <div class="info-item-img">
+                        <img src="../src/img/info1-img.png" loading="lazy">
+                    </div>
+                    <div class="info-item-tittle">
+                        <p>Читай упаковку</p>
+                    </div>
+                    <div class="info-item-icon">
+                        <img src="../src/img/info-icon.png" loading="lazy">
+                    </div>
+                    <div class="info-item-desc">
+                        <p>Природа Алтая уникальна. Большую часть территории занимают горы, сплошь изрезанные речными
+                            долинами и межгорными котлованами. </p>
+                    </div>
+                    <div class="info-button">
+                        <a class="info-btn" href="@">Подробнее</a>
+                    </div>
+                </div>
+                <div class="slider-mobile-item">
+                    <div class="info-item-img">
+                        <img src="../src/img/info2-img.png" loading="lazy">
+                    </div>
+                    <div class="info-item-tittle">
+                        <p>Читай упаковку</p>
+                    </div>
+                    <div class="info-item-icon">
+                        <img src="../src/img/info-icon.png" loading="lazy">
+                    </div>
+                    <div class="info-item-desc">
+                        <p>Природа Алтая уникальна. Большую часть территории занимают горы, сплошь изрезанные речными
+                            долинами и межгорными котлованами. </p>
+                    </div>
+                    <div class="info-button">
+                        <a class="info-btn" href="@">Подробнее</a>
+                    </div>
+                </div>
+                <div class="slider-mobile-item">
+                    <div class="info-item-img">
+                        <img src="../src/img/info3-img.png" loading="lazy">
+                    </div>
+                    <div class="info-item-tittle">
+                        <p>Читай упаковку</p>
+                    </div>
+                    <div class="info-item-icon">
+                        <img src="../src/img/info-icon.png" loading="lazy">
+                    </div>
+                    <div class="info-item-desc">
+                        <p>Природа Алтая уникальна. Большую часть территории занимают горы, сплошь изрезанные речными
+                            долинами и межгорными котлованами. </p>
+                    </div>
+                    <div class="info-button">
+                        <a class="info-btn" href="@">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="news">
+        <div class="news-header">
+            <div class="news-head">
+                <h3 class="news-head-tittle" id="newsheader">Новости</h3>
+                <img src="../src/img/news-icon.png" class="news-icon">
+            </div>
+            <div class="news-head-mobile">
+                <h3 class="news-head-tittle-mobile" id="newsheader">Новостная лента</h3>
+                <img src="../src/img/news-icon.png" class="news-icon">
+            </div>
+        </div>
+        <div class="news-content">
+            <ul class="news-steps">
+                <li class="news-step">
+                    <h3 class="news-step-heading" data-number="01">Заголовок статьи</h3>
+                    <div class="news-step-text">
+                        <p>Природа Алтая уникальна. Большую часть территории занимают
+                            горы, сплошь изрезанные речными долинами и межгорными котлованами. </p>
+                    </div>
+                    <a href="@" class="news-step-btn">Читать далее</a>
+                    <img class="news-step-img" src="../src/img/imgonline-com-ua-Resize-U0443quftz.jpg" loading="lazy">
+                </li>
+                <li class="news-step">
+                    <h3 class="news-step-heading" data-number="02">Заголовок статьи</h3>
+                    <div class="news-step-text">
+                        <p>Природа Алтая уникальна. Большую часть территории занимают
+                            горы, сплошь изрезанные речными долинами и межгорными котлованами. </p>
+                    </div>
+                    <a href="@" class="news-step-btn">Читать далее</a>
+                    <img class="news-step-img" src="../src/img/imgonline-com-ua-Resize-vuXKe8vdejrF.jpg" loading="lazy">
+                </li>
+                <li class="news-step">
+                    <h3 class="news-step-heading" data-number="03">Заголовок статьи</h3>
+                    <div class="news-step-text">
+                        <p>Природа Алтая уникальна. Большую часть территории занимают
+                            горы, сплошь изрезанные речными долинами и межгорными котлованами. </p>
+                    </div>
+                    <a href="@" class="news-step-btn">Читать далее</a>
+                    <img class="news-step-img" src="../src/img/imgonline-com-ua-Resize-GWAXWaYeoXQ7Y.jpg"
+                        loading="lazy">
+                </li>
+            </ul>
+            <ul class="news-slider">
+                <li class="news-slider-step">
+                    <h3 class="news-step-heading" data-number="01">Заголовок статьи</h3>
+                    <div class="news-step-text">
+                        <p>Природа Алтая уникальна. Большую часть территории занимают
+                            горы, сплошь изрезанные речными долинами и межгорными котлованами. </p>
+                    </div>
+                    <a href="@" class="news-step-btn">Читать далее</a>
+                    <img class="news-step-img" src="../src/img/imgonline-com-ua-Resize-U0443quftz.jpg" loading="lazy">
+                </li>
+                <li class="news-slider-step">
+                    <h3 class="news-step-heading" data-number="02">Заголовок статьи</h3>
+                    <div class="news-step-text">
+                        <p>Природа Алтая уникальна. Большую часть территории занимают
+                            горы, сплошь изрезанные речными долинами и межгорными котлованами. </p>
+                    </div>
+                    <a href="@" class="news-step-btn">Читать далее</a>
+                    <img class="news-step-img" src="../src/img/imgonline-com-ua-Resize-vuXKe8vdejrF.jpg" loading="lazy">
+                </li>
+                </li>
+                <li class="news-slider-step">
+                    <h3 class="news-step-heading" data-number="03">Заголовок статьи</h3>
+                    <div class="news-step-text">
+                        <p>Природа Алтая уникальна. Большую часть территории занимают
+                            горы, сплошь изрезанные речными долинами и межгорными котлованами. </p>
+                    </div>
+                    <a href="@" class="news-step-btn">Читать далее</a>
+                    <img class="news-step-img" src="../src/img/imgonline-com-ua-Resize-GWAXWaYeoXQ7Y.jpg"
+                        loading="lazy">
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="footer-bg-img">
+            <img src="../src/img/footer-bg-img.jpg" loading="lazy">
+        </div>
+        <div class="footer-content">
+            <div class="footer-heading">
+                <h3 class="footer-heading-text">Хочешь получать новости и дополнительные материалы? <br>Заполни форму:
+                </h3>
+            </div>
+            <div class="footer-input">
+                <input type="text" placeholder="Ваше имя" class="footer-input-item name">
+                <input type="email" placeholder="E-mail" class="footer-input-item email">
+                <div class="footer-input-button">
+                    <a class="footer-input-btn" href="@">Подписаться</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../dist/bundle.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="./js/swiper.js"></script>
+    <script src="../src/js/mobile.js"></script>
+
+</body>
+
+</html>
